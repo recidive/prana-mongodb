@@ -8,6 +8,7 @@ var utils = require('prana/lib/utils');
  * MongoDB Storage constructor.
  *
  * @constructor
+ * @param {Prana} application Prana application object.
  * @param {Object} settings Storage settings.
  */
 var MongoDBStorage = module.exports = function(application, settings) {
@@ -19,7 +20,7 @@ var MongoDBStorage = module.exports = function(application, settings) {
   }
 
   // Database client.
-  this.database = this.settings.database || {};
+  this.database = this.settings.database;
 };
 
 /**
